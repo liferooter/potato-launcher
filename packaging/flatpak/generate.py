@@ -22,7 +22,7 @@ def main():
         'app_name': get_env('LAUNCHER_NAME'),
         'version_manifest_url': get_env('VERSION_MANIFEST_URL'),
         'flatpak_id': get_env('LAUNCHER_APP_ID'),
-        'app_name_lower': get_env('LAUNCHER_NAME').lower().replace(' ', '_'),
+        'app_name_lower': get_env('LAUNCHER_NAME').lower().replace(' ', '_').replace("'", ''),
         'app_description': get_env('LAUNCHER_DESCRIPTION', ''),
         'flatpak_keywords': get_env('FLATPAK_KEYWORDS', ''),
         'backend_api_base': backend_api_base,
